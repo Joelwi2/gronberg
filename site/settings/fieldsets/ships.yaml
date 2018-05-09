@@ -1,0 +1,20 @@
+taxonomies: false
+title: Ships
+create_title: ships
+fields:
+  title:
+    type: text
+    display: title
+    localizable: true
+  info:
+    type: bard
+    display: info
+    spellcheck: true
+    allow_source: true
+    force_plain_text: true
+  img:
+    type: assets
+    display: img
+    container: ships
+    folder: /
+    max_files: 1

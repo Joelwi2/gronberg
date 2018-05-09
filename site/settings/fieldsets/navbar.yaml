@@ -1,0 +1,10 @@
+taxonomies: false
+title: navbar
+create_title: navbar
+fields:
+  logo:
+    type: assets
+    display: logo
+    container: main
+    folder: /
+    max_files: 1

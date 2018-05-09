@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" align="center">
+            <h1>Blog</h1>
+            <p>Alle news items</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {{ collection from="blog"}}
+            <div class="col-md-8 col-md-offset-2 blogbox">
+                <div class="imagebox" align="center">
+                    <img src="{{ headerimg }}" class="blogimg">
+                </div>
+                <div class="bloginfobox">
+                    <header>
+                        <a href="/blog/{{slug}}" class="blogtitle"><h2>{{ title }}</h2></a>
+                        <div>{{ date }}{{ person }}</div>
+                    </header>
+                    <div class="blogtext">
+                        {{ text | macro:blog }}
+                    </div>
+                    <footer class="entry-footer"></footer>
+                </div>
+            </div>
+        {{ /collection }}
+    </div>
+</div>

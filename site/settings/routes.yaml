@@ -1,0 +1,6 @@
+collections:
+  ship: /
+  blog: '/blog/{slug}'
+  news: '/news/{slug}'
+taxonomies: [ ]
+routes: [ ]

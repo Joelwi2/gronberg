@@ -1,0 +1,16 @@
+title: Contact opnemen
+fields:
+  name:
+    display: Naam
+  email:
+    display: E-mail
+  message:
+    display: Bericht
+columns:
+  - name
+  - email
+  - message
+metrics:
+  - 
+    type: null
+    label: null

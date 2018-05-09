@@ -1,0 +1,159 @@
+{{ blocks }}
+{{ if type == "header" }}
+<div class="container-fluid" style="padding-top: 0px; overflow: hidden;">
+    <div class="row">
+        <div style="position: relative;">
+            <div class="col-md-12">
+                <iframe style="width:100%; height: 758px;" src="https://www.youtube.com/embed/M47hWEIFWMU?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;modestbranding=1&amp;loop=1" modestbranding="1" autoplay="1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div style="position: absolute; top:8%; left: 10%; z-index: 3; width: 80%;">
+                    <h1 class="headertitle" style="text-shadow: 2px 2px #000000; font-size: 50px;">
+                        {{ title | content }}
+                    </h1>
+                    <a href="#contact">
+                        <button class="btn btn-primary" style="font-size: 18px;">
+                            Neem contact op
+                        </button>
+                    </a>
+                    <a href="vacatures">
+                        <button class="btn btn-info" style="font-size: 18px; margin-left: 5px;">
+                            Bekijk vacatures
+                        </button>
+                    </a>
+                </div>
+                <div style="position: absolute; width: 100%; bottom:0%; background-color: #f2f2f2; height: 130px; z-index: 3;">
+                    <div class="container">
+                        <div class="col-lg-12" style="padding-left: 0px;">
+                            <h2>{{ subtitle | content }}</h2>
+                            <p> {{ content | content }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: absolute; top: 0%; width: 100%; height: 100%; z-index: 2; background-color: #000000; opacity: 0.3;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ if type=="cards" }}
+<div class="container">
+    <div class="row topandborderpadding">
+        <div class="col-md-4 cards" align="center">
+            <i class="fa fa-cube icon"></i>
+            <div>
+                <h2>{{ title1 | content }}</h2>
+                <p>{{ content1 | content }}</p>
+            </div>
+        </div>
+        <div class="col-md-4 cards" align="center">
+            <i class="fa fa-cube icon"></i>
+            <div>
+                <h2>{{ title2 | content }}</h2>
+                <p>{{ content2 | content }}</p>
+            </div>
+        </div>
+        <div class="col-md-4 cards" align="center">
+            <i class="fa fa-cube icon"></i>
+            <div>
+                <h2>{{ title3 | content }}</h2>
+                <p>{{ content3 | content }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ if type=="about" }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 aboutheight">
+            <div class="side-padding">
+                <h2>{{ title | content }}</h2>
+                <p> {{ content | content }}</p>
+            </div>
+        </div>
+        <div class="col-md-6 bg-about">
+            <img src="{{ img }}" class="about_img">
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ if type=="ships" }}
+<div class="container">
+    <div class="row paddingbottom">
+        <div class="col-md-12 paddingtop" align="center">
+            <h2>{{ title | content }}</h2>
+            <p>{{ content | content }}</p>
+        </div>
+        <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+                {{ collection:ships limit="3" }}
+                <div class="item" align="center">
+                    <img src="{{ img }}" class="ourshipimg">
+                    <div class="paddingleftandright">
+                        <h3>{{ title }}</h3>
+                        {{ info | macro:summary }}
+                    </div>
+
+                </div>
+                {{ /collection:ships }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ if type=="balk" }}
+<div class="container-fluid" style="overflow: hidden;">
+    <div class="row bgbalk" style="background: url( {{ img }} ) no-repeat center center fixed;">
+        <div class="col-md-12 blackoverlay" align="center">
+
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ if type=="contact" }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Contactformulier</h2>
+            <p>{{ content | content }}</p>
+        </div>
+        <div class="col-md-6">
+            <main id="content" class="content">
+                <section class="block block-advanced">
+                    <div role="form">
+                        <div class="screen-reader-response"></div>
+                        {{ form:create formset="contact" }}
+                        <div class="row" id="contact">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Naam</label><br>
+                                        <span><input type="text" name="name" value="" size="40"
+                                                     class="form-control"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Emailadres</label><br>
+                                        <span><input type="text" name="email" value="" size="40"
+                                                     class="form-control"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Bericht</label><br>
+                                <span><textarea name="message" cols="40" rows="7"
+                                                class="form-control"></textarea></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Verzend" class="btn btn-primary"></span>
+                            </div>
+                        {{ /form:create }}
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</div>
+{{ /if }}
+{{ /blocks }}

@@ -1,0 +1,41 @@
+taxonomies: false
+title: Blog
+create_title: blog
+fields:
+  story:
+      type: bard
+      display: The Bard
+      sets:
+        quote:
+          fields:
+            text:
+              type: text
+            cite:
+              type: text
+        image:
+          fields:
+            image:
+              type: assets
+              container: main
+              folder: img
+              max_files: 1
+            alignment:
+              type: select
+              default: left
+              options:
+                left: Left
+                center: Center
+                right: Right
+  text:
+    type: redactor
+    display: Text
+    settings: Standard
+    container: blog
+    folder: /
+  headerimg:
+    type: assets
+    display: headerimg
+    container: blog
+    folder: /
+    max_files: 1
+

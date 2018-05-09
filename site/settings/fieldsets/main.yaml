@@ -1,0 +1,82 @@
+taxonomies: false
+title: Main
+create_title: ""
+fields:
+  template:
+    type: template
+  narbar:
+    type: replicator
+    sets:
+      logo:
+              fields:
+                img:
+                  type: assets
+                  display: img
+                  max_files: 1
+                  container: main
+  footer:
+
+  blocks:
+    type: replicator
+    sets:
+      header:
+        fields:
+          title:
+            type: text
+          subtitle:
+            type: text
+          img:
+            type: assets
+            display: img
+            max_files: 1
+            container: main
+      cards:
+        fields:
+          title:
+            type: text
+          content:
+            type: redactor
+          title1:
+            type: text
+          content1:
+            type: redactor
+          title2:
+            type: text
+          content2:
+            type: redactor
+          title3:
+            type: text
+          content3:
+            type: redactor
+      about:
+        fields:
+          title:
+            type: text
+          content:
+            type: redactor
+          img:
+            type: assets
+            display: img
+            max_files: 1
+            container: main
+      ships:
+        fields:
+          title:
+            type: text
+          content:
+            type: redactor
+      balk:
+        fields:
+          title:
+            type: text
+          content:
+            type: redactor
+          img:
+            type: assets
+            display: img
+            max_files: 1
+            container: main
+      contact:
+        fields:
+          content:
+            type: redactor

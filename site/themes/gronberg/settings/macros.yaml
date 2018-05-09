@@ -1,0 +1,17 @@
+summary:
+    strip_tags: [img, a, p]
+    safe_truncate: 150
+    ensure_right: ...
+    widont: true
+
+blog:
+    strip_tags: [img, a, p]
+    safe_truncate: 300
+    ensure_right: ...
+    widont: true
+
+footerblog:
+    strip_tags: [img, a, p]
+    safe_truncate: 60
+    ensure_right: ...
+    widont: true

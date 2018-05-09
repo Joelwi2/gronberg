@@ -1,0 +1,22 @@
+taxonomies: false
+title: Footer
+create_title: ""
+fields:
+  title_about:
+    type: text
+    display: title about
+  smal_info_about:
+    type: redactor
+    display: smal info about
+    settings: Standard
+    container: main
+    folder: /
+  adress:
+    type: text
+    display: adress
+  email:
+    type: text
+    display: email
+  phone_number:
+    type: text
+    display: Phone number
